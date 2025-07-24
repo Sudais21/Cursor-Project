@@ -7,11 +7,12 @@ A modern, responsive, and dark-themed portfolio website built with **HTML5**, **
 ## ✨ Features
 
 ### 🎨 Design & UI
-- **Dark Theme**: Modern dark color scheme with purple accents
+- **Enhanced Dark Theme**: Pure black backgrounds with vibrant purple (#8b5cf6) accents
+- **Advanced Containers**: Glass morphism, floating cards, neon effects, and gradient borders
 - **Responsive Design**: Fully responsive layout that works on all devices
-- **Smooth Animations**: CSS animations and scroll-triggered effects
+- **Smooth Animations**: CSS animations, scroll-triggered effects, and hover interactions
 - **Modern Typography**: Beautiful Poppins font family
-- **Interactive Elements**: Hover effects and transitions
+- **Interactive Elements**: Advanced hover effects with particles, transformations, and glows
 
 ### 🔧 Functionality
 - **Smooth Scrolling**: Navigation with smooth scroll behavior
@@ -28,6 +29,9 @@ A modern, responsive, and dark-themed portfolio website built with **HTML5**, **
 - **Scroll to Top**: Button to quickly return to top
 - **Notification System**: Toast notifications for user feedback
 - **Preloader**: Loading animation on page load
+- **Mouse Tracking**: Interactive hover zones that follow cursor
+- **Particle Effects**: Hover-triggered particle animations
+- **Enhanced Containers**: Multiple container styles (glass, floating, neon, gradient)
 - **Theme Toggle**: (Ready for implementation)
 
 ## 🏗️ Built With

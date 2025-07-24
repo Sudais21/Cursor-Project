@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectFilters();
     initScrollToTop();
     initThemeToggle();
+    initMouseTracker();
+    initEnhancedHoverEffects();
     
     // Show loading animation
     document.body.classList.add('loaded');
@@ -334,11 +336,12 @@ function createParticle(container) {
         position: absolute;
         width: ${size}px;
         height: ${size}px;
-        background: #6c63ff;
+        background: #8b5cf6;
         border-radius: 50%;
         opacity: ${opacity};
         left: ${Math.random() * 100}%;
         animation: float ${animationDuration}s infinite linear;
+        box-shadow: 0 0 10px #8b5cf6;
     `;
     
     container.appendChild(particle);
@@ -639,6 +642,122 @@ window.addEventListener('error', function(e) {
     console.error('An error occurred:', e.error);
     // You could send this to an error tracking service
 });
+
+// ===== MOUSE TRACKER FOR HOVER EFFECTS =====
+function initMouseTracker() {
+    const hoverZones = document.querySelectorAll('.hover-zone');
+    
+    hoverZones.forEach(zone => {
+        zone.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            
+            this.style.setProperty('--x', x + '%');
+            this.style.setProperty('--y', y + '%');
+        });
+        
+        zone.addEventListener('mouseleave', function() {
+            this.style.setProperty('--x', '50%');
+            this.style.setProperty('--y', '50%');
+        });
+    });
+}
+
+// ===== ENHANCED HOVER EFFECTS =====
+function initEnhancedHoverEffects() {
+    // Add hover classes to cards
+    const cards = document.querySelectorAll('.stat-card, .project-card, .tech-item');
+    cards.forEach(card => {
+        card.classList.add('hover-zone');
+    });
+    
+    // Enhanced particle effects on hover
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            createHoverParticles(this);
+        });
+    });
+    
+    // Glitch effect for tech items
+    const techItems = document.querySelectorAll('.tech-item');
+    techItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.filter = 'hue-rotate(10deg) brightness(1.1)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.filter = 'none';
+        });
+    });
+    
+    // Floating animation for contact icons
+    const contactIcons = document.querySelectorAll('.contact-icon');
+    contactIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.animation = 'float 1s ease-in-out infinite';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.animation = 'none';
+        });
+    });
+}
+
+function createHoverParticles(element) {
+    const particleCount = 5;
+    const rect = element.getBoundingClientRect();
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: #8b5cf6;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            left: ${rect.left + Math.random() * rect.width}px;
+            top: ${rect.top + Math.random() * rect.height}px;
+            animation: particleFloat 1s ease-out forwards;
+        `;
+        
+        document.body.appendChild(particle);
+        
+        setTimeout(() => {
+            if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+            }
+        }, 1000);
+    }
+}
+
+// Add particle float animation
+const hoverParticleStyle = document.createElement('style');
+hoverParticleStyle.textContent = `
+    @keyframes particleFloat {
+        0% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-30px) scale(0.5);
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+`;
+document.head.appendChild(hoverParticleStyle);
 
 // ===== ANALYTICS (Optional) =====
 // function initAnalytics() {
