@@ -1,1 +1,548 @@
-first commit
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Software Engineer Portfolio</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-code"></i> John Doe
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-3">
+                            Hi, I'm <span class="text-primary">John Doe</span>
+                        </h1>
+                        <h2 class="h3 mb-4 text-muted">Full-Stack Software Engineer</h2>
+                        <p class="lead mb-4">
+                            I craft digital experiences through clean code and innovative solutions. 
+                            Passionate about building scalable applications that make a difference.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-rocket"></i> View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-envelope"></i> Get In Touch
+                            </a>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="hero-image text-center">
+                        <div class="profile-img-container">
+                            <img src="https://via.placeholder.com/300x300/1a1a1a/6c63ff?text=JD" alt="John Doe" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Get to know me better</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="mb-4">I'm a passionate Software Engineer with 5+ years of experience</h3>
+                        <p class="mb-4">
+                            I specialize in building exceptional digital experiences using modern technologies. 
+                            My journey in software development started with curiosity and has evolved into a passion 
+                            for creating solutions that impact millions of users.
+                        </p>
+                        <p class="mb-4">
+                            When I'm not coding, you can find me exploring new technologies, contributing to open-source 
+                            projects, or sharing knowledge through technical blogs and mentoring.
+                        </p>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li><strong>Name:</strong> John Doe</li>
+                                    <li><strong>Experience:</strong> 5+ Years</li>
+                                    <li><strong>Location:</strong> San Francisco, CA</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li><strong>Email:</strong> john@example.com</li>
+                                    <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+                                    <li><strong>Freelance:</strong> Available</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="resume.pdf" class="btn btn-primary mt-3" target="_blank">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-stats">
+                        <div class="row">
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <h3 class="text-primary">50+</h3>
+                                    <p>Projects Completed</p>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <h3 class="text-primary">5+</h3>
+                                    <p>Years Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <h3 class="text-primary">100+</h3>
+                                    <p>Happy Clients</p>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <h3 class="text-primary">24/7</h3>
+                                    <p>Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-dark-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Technologies I work with</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="skill-category">
+                        <h4 class="mb-4">Frontend Technologies</h4>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>React.js</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Vue.js</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>TypeScript</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>HTML5/CSS3</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="skill-category">
+                        <h4 class="mb-4">Backend Technologies</h4>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Node.js</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Python</span>
+                                <span>87%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>MongoDB</span>
+                                <span>83%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>PostgreSQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h4 class="text-center mb-4">Tools & Technologies</h4>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-vue"></i>
+                            <span>Vue.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Some of my recent work</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/1a1a1a/6c63ff?text=E-Commerce" alt="E-Commerce Platform">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-light"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>E-Commerce Platform</h4>
+                            <p>Full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/1a1a1a/6c63ff?text=Task+Manager" alt="Task Management App">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-light"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Task Management App</h4>
+                            <p>Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Express</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/1a1a1a/6c63ff?text=Weather+App" alt="Weather Dashboard">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-light"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Weather Dashboard</h4>
+                            <p>Beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics using modern APIs.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12 text-center">
+                    <a href="#" class="btn btn-outline-primary btn-lg">
+                        <i class="fab fa-github"></i> View All Projects on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding bg-dark-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">Work Experience</h2>
+                    <p class="section-subtitle">My professional journey</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h4>Senior Software Engineer</h4>
+                                <h5 class="text-primary">TechCorp Inc.</h5>
+                                <span class="timeline-date">2022 - Present</span>
+                                <p>Leading a team of 5 developers in building scalable web applications. Implemented microservices architecture that improved system performance by 40%.</p>
+                                <ul>
+                                    <li>Architected and developed RESTful APIs serving 1M+ daily requests</li>
+                                    <li>Mentored junior developers and conducted code reviews</li>
+                                    <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h4>Full-Stack Developer</h4>
+                                <h5 class="text-primary">StartupXYZ</h5>
+                                <span class="timeline-date">2020 - 2022</span>
+                                <p>Developed end-to-end solutions for various client projects using modern web technologies and agile methodologies.</p>
+                                <ul>
+                                    <li>Built responsive web applications using React and Vue.js</li>
+                                    <li>Developed backend services with Node.js and Python</li>
+                                    <li>Collaborated with designers to implement pixel-perfect UIs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h4>Junior Developer</h4>
+                                <h5 class="text-primary">DevStudio</h5>
+                                <span class="timeline-date">2019 - 2020</span>
+                                <p>Started my professional journey working on various web development projects and learning industry best practices.</p>
+                                <ul>
+                                    <li>Contributed to multiple client projects using HTML, CSS, and JavaScript</li>
+                                    <li>Learned modern frameworks and development workflows</li>
+                                    <li>Participated in daily standups and sprint planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's work together on your next project</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" rows="6" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 text-center mb-4">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Location</h5>
+                        <p>San Francisco, CA<br>United States</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mb-4">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email</h5>
+                        <p>john.doe@example.com<br>hello@johndoe.dev</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mb-4">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Phone</h5>
+                        <p>+1 (555) 123-4567<br>Available 9 AM - 6 PM PST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark-secondary text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="social-links mb-3">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p class="mb-0">&copy; 2024 John Doe. All rights reserved. Made with <i class="fas fa-heart text-primary"></i> and <i class="fas fa-coffee"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
